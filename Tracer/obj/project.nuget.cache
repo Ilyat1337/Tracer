@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "l8LqA9uanNq1WBg1qo5qGm2wnPqql3djsxBRdZhLmaBSU10mnWtBvQYtECOgVHZnblPOegjBzi+sfVUKdYuhlQ==",
+  "success": true,
+  "projectFilePath": "D:\\!Университет\\5 семестр\\СПП\\Tracer\\Tracer\\Tracer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Ilyat\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Ilyat\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,9 @@
+D:\!Университет\5 семестр\СПП\Tracer\Tracer\bin\Debug\netstandard2.0\Tracer.deps.json
+D:\!Университет\5 семестр\СПП\Tracer\Tracer\bin\Debug\netstandard2.0\Tracer.dll
+D:\!Университет\5 семестр\СПП\Tracer\Tracer\bin\Debug\netstandard2.0\Tracer.pdb
+D:\!Университет\5 семестр\СПП\Tracer\Tracer\obj\Debug\netstandard2.0\Tracer.csprojAssemblyReference.cache
+D:\!Университет\5 семестр\СПП\Tracer\Tracer\obj\Debug\netstandard2.0\Tracer.AssemblyInfoInputs.cache
+D:\!Университет\5 семестр\СПП\Tracer\Tracer\obj\Debug\netstandard2.0\Tracer.AssemblyInfo.cs
+D:\!Университет\5 семестр\СПП\Tracer\Tracer\obj\Debug\netstandard2.0\Tracer.csproj.CoreCompileInputs.cache
+D:\!Университет\5 семестр\СПП\Tracer\Tracer\obj\Debug\netstandard2.0\Tracer.dll
+D:\!Университет\5 семестр\СПП\Tracer\Tracer\obj\Debug\netstandard2.0\Tracer.pdb
