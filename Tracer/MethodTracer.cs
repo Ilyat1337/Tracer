@@ -55,7 +55,10 @@ namespace Tracer
                 return threadsMap[threadId];
 
             ThreadTraceResult threadTraceResult = new ThreadTraceResult(threadId);
-            traceResult.Threads.Add(threadTraceResult);
+            lock (traceResult)
+            {
+                traceResult.Threads.Add(threadTraceResult);
+            }
             TracingThreadInfo tracingThreadInfo = new TracingThreadInfo(threadTraceResult, threadId);
             return threadsMap[threadId] = tracingThreadInfo;
         }
