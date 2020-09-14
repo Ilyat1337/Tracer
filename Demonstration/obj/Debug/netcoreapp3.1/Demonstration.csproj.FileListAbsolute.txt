@@ -1,0 +1,16 @@
+D:\!Университет\5 семестр\СПП\Tracer\Demonstration\bin\Debug\netcoreapp3.1\Demonstration.exe
+D:\!Университет\5 семестр\СПП\Tracer\Demonstration\bin\Debug\netcoreapp3.1\Demonstration.deps.json
+D:\!Университет\5 семестр\СПП\Tracer\Demonstration\bin\Debug\netcoreapp3.1\Demonstration.runtimeconfig.json
+D:\!Университет\5 семестр\СПП\Tracer\Demonstration\bin\Debug\netcoreapp3.1\Demonstration.runtimeconfig.dev.json
+D:\!Университет\5 семестр\СПП\Tracer\Demonstration\bin\Debug\netcoreapp3.1\Demonstration.dll
+D:\!Университет\5 семестр\СПП\Tracer\Demonstration\bin\Debug\netcoreapp3.1\Demonstration.pdb
+D:\!Университет\5 семестр\СПП\Tracer\Demonstration\obj\Debug\netcoreapp3.1\Demonstration.csprojAssemblyReference.cache
+D:\!Университет\5 семестр\СПП\Tracer\Demonstration\obj\Debug\netcoreapp3.1\Demonstration.AssemblyInfoInputs.cache
+D:\!Университет\5 семестр\СПП\Tracer\Demonstration\obj\Debug\netcoreapp3.1\Demonstration.AssemblyInfo.cs
+D:\!Университет\5 семестр\СПП\Tracer\Demonstration\obj\Debug\netcoreapp3.1\Demonstration.csproj.CoreCompileInputs.cache
+D:\!Университет\5 семестр\СПП\Tracer\Demonstration\obj\Debug\netcoreapp3.1\Demonstration.dll
+D:\!Университет\5 семестр\СПП\Tracer\Demonstration\obj\Debug\netcoreapp3.1\Demonstration.pdb
+D:\!Университет\5 семестр\СПП\Tracer\Demonstration\obj\Debug\netcoreapp3.1\Demonstration.genruntimeconfig.cache
+D:\!Университет\5 семестр\СПП\Tracer\Demonstration\bin\Debug\netcoreapp3.1\Tracer.dll
+D:\!Университет\5 семестр\СПП\Tracer\Demonstration\bin\Debug\netcoreapp3.1\Tracer.pdb
+D:\!Университет\5 семестр\СПП\Tracer\Demonstration\obj\Debug\netcoreapp3.1\Demonstration.csproj.CopyComplete

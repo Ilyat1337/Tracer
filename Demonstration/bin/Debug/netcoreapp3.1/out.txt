@@ -1,0 +1,84 @@
+{
+  "threads": [
+    {
+      "id": 1,
+      "time": 840,
+      "methods": [
+        {
+          "name": "StartTest",
+          "class": "BackgroundTestStarter",
+          "time": 840
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "time": 827,
+      "methods": [
+        {
+          "name": "InnerMethod1",
+          "class": "BackgroundClassTest",
+          "time": 505
+        },
+        {
+          "name": "InnerMethod2",
+          "class": "BackgroundClassTest",
+          "time": 322,
+          "methods": [
+            {
+              "name": "DeepMethod",
+              "class": "BackgroundClassTest",
+              "time": 108
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "time": 827,
+      "methods": [
+        {
+          "name": "InnerMethod1",
+          "class": "BackgroundClassTest",
+          "time": 505
+        },
+        {
+          "name": "InnerMethod2",
+          "class": "BackgroundClassTest",
+          "time": 322,
+          "methods": [
+            {
+              "name": "DeepMethod",
+              "class": "BackgroundClassTest",
+              "time": 107
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "time": 828,
+      "methods": [
+        {
+          "name": "InnerMethod1",
+          "class": "BackgroundClassTest",
+          "time": 505
+        },
+        {
+          "name": "InnerMethod2",
+          "class": "BackgroundClassTest",
+          "time": 323,
+          "methods": [
+            {
+              "name": "DeepMethod",
+              "class": "BackgroundClassTest",
+              "time": 110
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
