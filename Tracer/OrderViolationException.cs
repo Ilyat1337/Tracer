@@ -2,7 +2,7 @@
 
 namespace Tracer
 {
-    class OrderViolationException : Exception
+    public class OrderViolationException : Exception
     {
     }
 }
