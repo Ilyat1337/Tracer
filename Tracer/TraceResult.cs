@@ -8,12 +8,17 @@ namespace Tracer
     {
         public TraceResult()
         {
-            Threads = new List<ThreadTraceResult>();
+
+        }
+
+        public TraceResult(List<ThreadTraceResult> threadTraceResults)
+        {
+            Threads = threadTraceResults;
         }
 
         [XmlElement("thread")]
         public List<ThreadTraceResult> Threads
-        { get; set; }
+        { get; }
     }
 
     public class ThreadTraceResult

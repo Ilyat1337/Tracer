@@ -13,22 +13,23 @@ namespace Tracer
     {
         private static readonly int METHOD_DEPTH = 2;
 
-        private readonly TraceResult traceResult;
+        private TraceResult traceResult;
         private readonly ConcurrentDictionary<int, TracingThreadInfo> threadsMap;
-        private bool isThreadTimeCounted;
+        private bool isThreadResultCreated;
 
         public MethodTracer()
         {
-            traceResult = new TraceResult();
             threadsMap = new ConcurrentDictionary<int, TracingThreadInfo>();
         }
 
         public TraceResult GetTraceResult()
         {
-            if (!isThreadTimeCounted)
+            if (!isThreadResultCreated)
             {
+                traceResult = new TraceResult(threadsMap.Values.Where(tracingInfo => !tracingInfo.IsEmptyThread).
+                    Select(tracingInfo => tracingInfo.ThreadTraceResult).ToList());
                 CountThreadTimes();
-                isThreadTimeCounted = true;
+                isThreadResultCreated = true;
             }
             return traceResult;
         }
@@ -55,11 +56,7 @@ namespace Tracer
                 return threadsMap[threadId];
 
             ThreadTraceResult threadTraceResult = new ThreadTraceResult(threadId);
-            lock (traceResult)
-            {
-                traceResult.Threads.Add(threadTraceResult);
-            }
-            TracingThreadInfo tracingThreadInfo = new TracingThreadInfo(threadTraceResult, threadId);
+            TracingThreadInfo tracingThreadInfo = new TracingThreadInfo(threadTraceResult);
             return threadsMap[threadId] = tracingThreadInfo;
         }
 
@@ -92,8 +89,6 @@ namespace Tracer
             TracingThreadInfo tracingThreadInfo = TryGetTracingThreadInfo(threadId);
             MethodBase parentMethod = GetParentMethod();
             TrySaveTraceResults(tracingThreadInfo, parentMethod, endTime);
-
-            isThreadTimeCounted = false;
         }
 
         private void TrySaveTraceResults(TracingThreadInfo tracingThreadInfo, MethodBase parentMethod, long endTime)
@@ -104,7 +99,12 @@ namespace Tracer
             TracingMethodInfo tracingMethodInfo = tracingThreadInfo.TracingStack.Pop();
             tracingMethodInfo.MethodTraceResult.Time = (int)(endTime - tracingMethodInfo.StartTime);
             if (tracingThreadInfo.TracingStack.Count == 0)
+            {
                 tracingThreadInfo.ThreadTraceResult.Methods.Add(tracingMethodInfo.MethodTraceResult);
+                tracingThreadInfo.IsEmptyThread = false;
+
+                isThreadResultCreated = false;
+            }
         }
 
         private TracingThreadInfo TryGetTracingThreadInfo(int threadId)
@@ -123,11 +123,11 @@ namespace Tracer
 
     class TracingThreadInfo
     {
-        public TracingThreadInfo(ThreadTraceResult threadTraceResult, int threadId)
+        public TracingThreadInfo(ThreadTraceResult threadTraceResult)
         {
             ThreadTraceResult = threadTraceResult;
             TracingStack = new Stack<TracingMethodInfo>();
-            ThreadId = threadId;
+            IsEmptyThread = true;
         }
 
         public Stack<TracingMethodInfo> TracingStack
@@ -136,8 +136,8 @@ namespace Tracer
         public ThreadTraceResult ThreadTraceResult
         { get; }
 
-        public int ThreadId
-        { get; }
+        public bool IsEmptyThread
+        { get; set; }
     }
 
     class TracingMethodInfo
